@@ -1,6 +1,10 @@
 const express = require('express'); // Express web server framework
-var supersaas = require('supersaas-api-client');
-var Client = supersaas.Client;
+const supersaas = require('supersaas-api-client');
+const Client = supersaas.Client;
+
+const app = express();
+
+app.use(express.static(`${__dirname}/public`))
 
 Client.configure({
   accountName: 'Loke',
