@@ -88,8 +88,11 @@ var Tos;
 <body>
 <iframe id="sass" src="https://www.supersaas.dk/schedule/Loke/stadsarkiv" width=100% height="900" frameborder="0" allowfullscreen scrolling="no"></iframe>
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">Vis Lokalet</button>
+<div class="wrapper">
+    <button id="myBtn" class="myBtn">Vis Lokalet</button>
+</div>
 
+<div class="ancestor">
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
@@ -98,16 +101,19 @@ var Tos;
     <span class="close">&times;</span>
     <div class="spacer"></div>
     <div class="room">
+	<div class="placeHolder smallBox" id="PH2"></div>
         <div class="selectable horizontalComputer" id="DPC">Dokument-, OCR- og A3-skanner</div>
         <div class="selectable horizontalComputer" id="SPC1">SkannerPC 1</div>
         <div class="selectable horizontalComputer" id="SPC2">SkannerPC 2</div>
         <div class="selectable horizontalComputer" id="ZEU">Zeutschel</div>
-        <div class="verticalComputer" id="PH1">PlaceHolder</div>
+        <div class="placeHolder verticalComputer" id="PH1"></div>
+        <div class="placeHolder fileCabinet" id="PH3"></div>
+        <div class="door" id="DOOR"></div>
     </div>
   </div>
 
 </div>
-<dialog id="reservation">
+<dialog id="reservation" class="dialog">
 	<span class="dhead_n"><span class="dialoghead">Ny Reservation</span> <a href="javascript:void(0)" onclick="hideDialog()" class="i i-x" aria-hidden="true"></a></span>
 	<div class="dbox_n">
 		<form accept-charset="UTF-8" method="dialog"><input name="utf8" type="hidden" value="✓">
@@ -142,12 +148,13 @@ var Tos;
 
 									</tbody></table>
 				<div class="dbtn_n">
-					<span><button name="button" type="submit" onclick="hideDialog()" class="but">Opret Reservation</button></span>
+					<span><button name="button" type="submit" onclick="confirm()" class="but">Opret Reservation</button></span>
 					<a href="javascript:void(0)" onclick="hideDialog()" class="small l-c">Annuller</a><input type="hidden" name="reservation[xpos]" id="reservation_xpos" value="-51"><input type="hidden" name="reservation[ypos]" id="reservation_ypos" value="649">
 					<div class="spin_w"><div class="spin" id="reservation_progress" style="display:none"></div></div>
 				</div>
 </form>	</div>
 </dialog>
+</div>
 
 </body>
 
@@ -202,6 +209,12 @@ var Tos;
     $(".selectable").on("click", mouseClick);
     
     $("#submitButton").on("click", submitClick);
+
+    var modal = document.getElementById('myModal');
+    function confirm() {
+    	dialog.close('closed');
+	modal.style.display = "none";
+    }
 </script>
 <script>
 // Get the modal

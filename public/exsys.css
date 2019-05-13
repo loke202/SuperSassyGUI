@@ -1,202 +1,563 @@
 body {
+
     margin: 0px;
+
 }
+
+
 
 .spacer {
+
     float: left;
-    width: 500px;
-    height: 600px;
+
+    width: 512px;
+
+    height: 612px;
+
 }
+
+
 
 .room {
+
     position: absolute;
+
     background-color: lightgrey;
+
     width: 500px;
+
     height: 600px;
-    border:1px solid #000;
+
+    border: 6px solid #000;
+
+    border-color: #4C4749;
+
 }
+
+
+
+.door {
+
+    position: absolute;
+
+    background-color: lightgrey;
+
+    width: 200px;
+
+    height: 5px;
+
+    border: 0px solid #000;
+
+}
+
+
+
+.smallBox {
+
+    box-sizing: border-box;
+
+    position: absolute;
+
+    width: 90px;
+
+    height: 90px;
+
+    border: 2px solid #000;
+
+}
+
+
+
+.fileCabinet {
+
+    box-sizing: border-box;
+
+    position: absolute;
+
+    width: 110px;
+
+    height: 150px;
+
+    border: 2px solid #000;
+
+}
+
+
 
 .horizontalComputer {
+
     box-sizing: border-box;
+
     position: absolute;
-    background-color: peachpuff;
+
     width: 250px;
+
     height: 90px;
-    border: 1px solid #000;
+
+    border: 2px solid #000;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    line-height: 90px;
+
+    color: white;
+
+    font-family: "Verdana";
+
+    font-size: 14px;
+
 }
+
+
 
 .verticalComputer {
+
     box-sizing: border-box;
+
     position: absolute;
-    background-color: peachpuff;
+
     width: 90px;
+
     height: 250px;
-    border: 1px solid #000;
+
+    border: 2px solid #000;
+
 }
+
+
 
 .selected {
-    border: 3px solid;
+
+    border: 7px solid;
+
+    border-style: groove;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    line-height: 80px;
+
 }
+
+
+
+.placeHolder {
+
+    background: repeating-linear-gradient(
+
+        45deg,
+
+        #8B8385,
+
+        #8B8385 3px,
+
+        rgb(240, 240, 240) 5px,
+
+        rgb(240, 240, 240) 10px
+
+    );
+
+    border-color: #8B8385;
+
+}
+
+
 
 #DPC {
-    left: 100px;
+
+    left: 110px;
+
     top: 5px;
+
+    background-color: #DF5E75;
+
+    border-color: #BB344C;
+
 }
+
+
 
 #SPC1 {
+
     left: 5px;
+
     top: 200px;
+
+    background-color: #8F9092;
+
+    border-color: #505152;
+
 }
+
+
 
 #SPC2 {
+
     left: 5px;
+
     top: 300px;
+
+    background-color: #7A54BB;
+
+    border-color: #4F357D;
+
 }
+
+
 
 #ZEU {
+
     left: 5px;
+
     top: calc(600px - 95px);
+
+    background-color: #3DBC9E;
+
+    border-color: #218C72;
+
 }
+
+
+
+#DOOR {
+
+    left: calc(500px - 220px);
+
+    top: calc(600px - 1px);
+
+}
+
+
 
 #PH1 {
+
     left: calc(500px - 95px);
+
     top: 190px;
+
 }
+
+
+
+#PH2 {
+
+    left: 5px;
+
+    top: 5px;
+
+}
+
+
+
+#PH3 {
+
+    left: calc(500px - 115px);
+
+    top: 5px;
+
+}
+
+
 
 /* The Modal (background) */
+
 .modal {
+
   display: none; /* Hidden by default */
+
   position: fixed; /* Stay in place */
+
   z-index: 1; /* Sit on top */
+
   padding-top: 100px; /* Location of the box */
+
   left: 0;
+
   top: 0;
+
   width: 100%; /* Full width */
+
   height: 100%; /* Full height */
+
   overflow: auto; /* Enable scroll if needed */
+
   background-color: rgb(0,0,0); /* Fallback color */
+
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
 }
+
+
 
 /* Modal Content */
+
 .modal-content {
+
   position: relative;
+
   background-color: #fefefe;
+
   margin: auto;
+
   padding: 0;
+
   border: 1px solid #888;
+
   width: 80%;
+
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
   -webkit-animation-name: animatetop;
+
   -webkit-animation-duration: 0.4s;
+
   animation-name: animatetop;
+
   animation-duration: 0.4s
+
 }
+
+
 
 /* Add Animation */
+
 @-webkit-keyframes animatetop {
+
   from {top:-300px; opacity:0} 
+
   to {top:0; opacity:1}
+
 }
+
+
 
 @keyframes animatetop {
+
   from {top:-300px; opacity:0}
+
   to {top:0; opacity:1}
+
 }
+
+
 
 /* The Close Button */
+
 .close {
+
   color: white;
+
   float: right;
+
   font-size: 28px;
+
   font-weight: bold;
+
 }
+
+
 
 .close:hover,
+
 .close:focus {
+
   color: #000;
+
   text-decoration: none;
+
   cursor: pointer;
+
 }
 
+
+
 .modal-header {
+
   padding: 2px 16px;
+
   background-color: #5cb85c;
+
   color: white;
+
 }
+
+
 
 .modal-body {padding: 2px 16px;}
 
+
+
 .modal-footer {
+
   padding: 2px 16px;
+
   background-color: #5cb85c;
+
   color: white;
+
 }/* The Modal (background) */
+
 .modal {
+
   display: none; /* Hidden by default */
+
   position: fixed; /* Stay in place */
+
   z-index: 1; /* Sit on top */
+
   padding-top: 100px; /* Location of the box */
+
   left: 0;
+
   top: 0;
+
   width: 100%; /* Full width */
+
   height: 100%; /* Full height */
+
   overflow: auto; /* Enable scroll if needed */
+
   background-color: rgb(0,0,0); /* Fallback color */
+
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
 }
+
+
 
 /* Modal Content */
+
 .modal-content {
+
   position: relative;
+
   background-color: #fefefe;
+
   margin: auto;
+
   padding: 0;
+
   border: 1px solid #888;
+
   width: 80%;
+
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
   -webkit-animation-name: animatetop;
+
   -webkit-animation-duration: 0.4s;
+
   animation-name: animatetop;
+
   animation-duration: 0.4s
+
 }
+
+
 
 /* Add Animation */
+
 @-webkit-keyframes animatetop {
+
   from {top:-300px; opacity:0} 
+
   to {top:0; opacity:1}
+
 }
+
+
 
 @keyframes animatetop {
+
   from {top:-300px; opacity:0}
+
   to {top:0; opacity:1}
+
 }
+
+
 
 /* The Close Button */
+
 .close {
+
   color: white;
+
   float: right;
+
   font-size: 28px;
+
   font-weight: bold;
+
 }
+
+
 
 .close:hover,
+
 .close:focus {
+
   color: #000;
+
   text-decoration: none;
+
   cursor: pointer;
+
 }
 
+
+
 .modal-header {
+
   padding: 2px 16px;
+
   background-color: #5cb85c;
+
   color: white;
+
 }
+
+
 
 .modal-body {padding: 2px 16px;}
 
+
+
 .modal-footer {
+
   padding: 2px 16px;
+
   background-color: #5cb85c;
+
   color: white;
+
+}
+
+.dialog {
+  position: absolute;
+  margin-right: 30%;
+}
+
+.ancestor {
+  position: relative;
+}
+
+.myBtn {
+box-sizing: border-box;
+  width: 200px;
+  height: 50px;
+  color: white;
+  font-family: "Verdana";
+  font-weight: 900;
+  font-size: 20px;
+  background-color: blue;
+  border-color: darkblue;
+  position: absolute;
+}
+
+.wrapper {
+    text-align: center;
 }
